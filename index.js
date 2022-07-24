@@ -2,7 +2,7 @@ const regExObj = {
   mail: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
   alnum: /^[a-z0-9]+$/i,
   string: /^[a-zA-Z\s]*$/,
-  number: /^[0-9]*$/,
+  number: /^[+-]?([0-9]+\.?[0-9]*|\.[0-9]+)$/,
 };
 
 const errorMessages = {
