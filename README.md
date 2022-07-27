@@ -16,3 +16,5 @@
      -  isRequired
 - [Dialog](https://github.com/Saurav-Singh-Rauthan/comp-oh-nents/tree/dialog)
   - responsive dialog component
+- [Alert](https://github.com/Saurav-Singh-Rauthan/comp-oh-nents/tree/alert)
+  - feedback component in the form of alert snackbar, pops up from bottom center and is customizable
