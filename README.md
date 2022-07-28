@@ -18,3 +18,6 @@
   - responsive dialog component
 - [Alert](https://github.com/Saurav-Singh-Rauthan/comp-oh-nents/tree/alert)
   - feedback component in the form of alert snackbar, pops up from bottom center and is customizable
+- [Readme](https://github.com/Saurav-Singh-Rauthan/comp-oh-nents/tree/readme)
+  - feedback component in the form of alert snackbar, pops up from bottom center and is customizable
+
