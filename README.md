@@ -4,6 +4,8 @@
   - validation methods for react input elements 
      -  isMoreThan
      -  isLessThan
+     -  maxWords
+     -  minWords
      -  isEqual
      -  isNumberOnly
      -  isStringOnly
