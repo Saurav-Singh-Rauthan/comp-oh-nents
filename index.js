@@ -17,6 +17,8 @@ const errorMessages = {
   notmaxVal: "Number entered is bigger than maximum value",
   notless: "Value is not less than the compared value",
   notmore: "Value is not more than the compared value",
+  notmaxWords: "Value entered is exceeding the maximum limit",
+  notminWords: "Value entered is not exceeding the minimum limit",
 };
 
 const minVal = (value, param = 1) => {
@@ -41,6 +43,22 @@ const minLength = (value, param = 5) => {
 
 const maxLength = (value, param = 5) => {
   return value[0].trim().length <= param ? true : false;
+};
+
+const maxWords = (value, param = 100) => {
+  value = value[0]
+    .trim()
+    .split(/\s+/)
+    .filter((word) => word !== "");
+  return value.length <= param ? true : false;
+};
+
+const minWords = (value, param = 100) => {
+  value = value[0]
+    .trim()
+    .split(/\s+/)
+    .filter((word) => word !== "");
+  return value.length >= param ? true : false;
 };
 
 const isMail = (value) => {
@@ -117,6 +135,24 @@ const Validate = (value = "", type = "") => {
           maxLength(value, length)
             ? ""
             : [errorMessages.invalidLength, `maximum ${length}`].join(" ")
+        );
+        break;
+      case "maxWords":
+        length = +check.trim().split(" ")[1];
+        validity = validity && maxWords(value, length);
+        errors.push(
+          maxWords(value, length)
+            ? ""
+            : [errorMessages.notmaxWords, `maximum ${length}`].join(" ")
+        );
+        break;
+      case "minWords":
+        length = +check.trim().split(" ")[1];
+        validity = validity && minWords(value, length);
+        errors.push(
+          minWords(value, length)
+            ? ""
+            : [errorMessages.notminWords, `minimum ${length}`].join(" ")
         );
         break;
       case "isMail":
