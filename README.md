@@ -15,7 +15,9 @@
      -  minLength
      -  maxLength
      -  isMail
-     -  isRequired
+     -  isRequired  
+  
+    `added typescript definations` [check here](https://github.com/Saurav-Singh-Rauthan/comp-oh-nents/blob/val-i-dator/validator.ts)
 - [Dialog](https://github.com/Saurav-Singh-Rauthan/comp-oh-nents/tree/dialog)
   - responsive dialog component
 - [Alert](https://github.com/Saurav-Singh-Rauthan/comp-oh-nents/tree/alert)
